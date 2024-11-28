@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 2</title>
+</head>
+
+<body>
+    <h1>Oppgave 2</h1>
+
+    <script>
+        const url = 'https://raw.githubusercontent.com/samayo/country-json/refs/heads/master/src/country-by-capital-city.json'
+            fetch(url)
+            .then(response => response.json())
+            .then(data => console.log(data))
+    </script>
+</body>
+
+</html>

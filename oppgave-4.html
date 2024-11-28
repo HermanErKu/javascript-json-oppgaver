@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 4</title>
+</head>
+
+<body>
+    <h1>Oppgave 4</h1>
+
+    <table id="countries-table">
+        <tr>
+            <th>Land</th>
+            <th>Hovedstad</th>
+        </tr>
+    </table>
+
+    <script>
+        const url = 'https://raw.githubusercontent.com/samayo/country-json/refs/heads/master/src/country-by-capital-city.json'
+        const table = document.getElementById("countries-table");
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(element => {
+                    table.innerHTML += "<tr><td>"+element.country+"</td><td>"+(element.city || "")+"</td></tr>";
+                    console.log(element);
+                });
+            })
+
+    </script>
+</body>
+
+</html>
